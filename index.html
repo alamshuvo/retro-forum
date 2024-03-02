@@ -14,56 +14,115 @@
     <!-- style file  -->
     <link rel="stylesheet" href="./style/style.css" />
   </head>
-  <body>
+  <body class="mulish">
     <!-- navbar area start here -->
     <nav class="container mx-auto my-6">
       <div>
         <div class="navbar flex justify-between">
-          <div class="navbar-start ">
-            <a class="btn btn-ghost text-3xl lg:text-4xl font-extrabold mulish text-[#12132D]">Simple</a>
+          <div class="navbar-start">
+            <a
+              class="btn btn-ghost text-3xl lg:text-4xl font-extrabold mulish text-[#12132D]"
+              >Simple</a
+            >
           </div>
-          <!--  -->
+          <!-- nav bar end area circle -->
           <div class="navbar-end flex gap-10">
             <!-- circle button start -->
             <div class="hidden lg:flex gap-5">
               <button class="btn btn-circle another">
-                <div class="tooltip"> <img  class="h-6 w-6" src="./img/navIcon/home.png" alt="">
-                  <span class="anothertext">Tooltip text</span>
+                <div class="tooltip">
+                  <img class="h-6 w-6" src="./img/navIcon/home.png" alt="" />
+                  <span class="anothertext">Home</span>
                 </div>
-               
               </button>
               <button class="btn btn-circle another">
-                <div class="tooltip">  <img class="h-6 w-6"  src="./img/navIcon/pensil.png" alt="">
-                <span class="anothertext">Tooltip text</span>
-              </div>
-              
+                <div class="tooltip">
+                  <img class="h-6 w-6" src="./img/navIcon/pensil.png" alt="" />
+                  <span class="anothertext">Adjust</span>
+                </div>
               </button>
               <button class="btn btn-circle another">
-                <div class="tooltip"><img  class="h-6 w-6" src="./img/navIcon/add.png" alt="">
-                  <span class="anothertext">Tooltip text</span>
+                <div class="tooltip">
+                  <img class="h-6 w-6" src="./img/navIcon/add.png" alt="" />
+                  <span class="anothertext">Add</span>
                 </div>
-                
               </button>
               <button class="btn btn-circle another">
-                <div class="tooltip"><img  class="h-6 w-6"  src="./img/navIcon/flag.png" alt="">
-                  <span class="anothertext">Tooltip text</span>
+                <div class="tooltip">
+                  <img class="h-6 w-6" src="./img/navIcon/flag.png" alt="" />
+                  <span class="anothertext">Country</span>
                 </div>
-                
               </button>
             </div>
             <!-- circle button end -->
             <div>
-              <button class="btn rounded-2xl bg-[#797DFC] text-white">Sign In</button>
+              <button class="btn rounded-2xl bg-[#797DFC] text-white">
+                Sign In
+              </button>
             </div>
-            
           </div>
-         
         </div>
       </div>
     </nav>
     <!-- navbar area end -->
     <!-- main area start -->
-    <main class="container mx-auto"></main>
+    <main class="container mx-auto">
+      <!-- banner section -->
+      <section class="my-16">
+        <div>
+          <div
+            class="hero  min-h-screen bg-[#12132D] rounded-3xl"
+            style="background-image: url('./img/bgbanner.png') "
+          >
+           
+            <div class="hero-content text-center text-neutral-content flex flex-col lg:flex-row justify-between gap-20 lg:gap-40">
+              <!-- left side start -->
+              <div
+                class="lg:w-[60%] w-full flex flex-col gap-5 text-center lg:text-start justify-between mb-5"
+              >
+                <h1 class=" text-3xl leading-[4rem] lg:text-[50px] font-black ">Welcome to the <br><span class="h-14 text-cyan-500 ">SimPle</span> Forum</h1>
+                <p class="text-[20px] font-semibold">
+                  Share your favorite opinion and win and wp forum coffee mug!
+                </p>
+                <label class="input rounded-3xl input-bordered flex items-center gap-2">
+                  <input
+                    type="text"
+                    class="grow"
+                    placeholder="Search here anything"
+                  />
+                  <span class="btn rounded-3xl bg-[#797DFC] text-white">search</span>
+                </label>
+              </div>
+              <!-- left side end -->
+              <!-- right side start -->
+              <div class=" lg:w-[40%] w-full flex justify-center p-5 bg-white rounded-2xl">
+                <div class="rounded-xl w-full bg-white">
+                  <div class="flex gap-5 flex-col justify-center">
+                    <div class="flex justify-between text-[#12132dcc] text-[16px] font-bold">
+                      <h1>Registered Users</h1>
+                      <h1>05</h1>
+                    </div>
+                    <div class="flex justify-between text-[#12132dcc] text-[16px] font-bold">
+                      <h1>Forum</h1>
+                      <h1>05</h1>
+                    </div>
+                    <div class="flex justify-between text-[#12132dcc] text-[16px] font-bold">
+                      <h1>Topics</h1>
+                      <h1>01</h1>
+                    </div>
+                    <div class="flex justify-between text-[#12132dcc] text-[16px] font-bold">
+                      <h1>Replies</h1>
+                      <h1>02</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- right side end -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- main area end -->
     <!-- footer area start -->
     <footer></footer>
