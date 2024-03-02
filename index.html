@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Passion</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Forum</title>
     <!-- daisy UI cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- style file  -->
-    <link rel="stylesheet" href="./style/style.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- navbar area start here -->
+    <nav class="container mx-auto my-6">
+      <div>
+        <div class="navbar flex justify-between">
+          <div class="navbar-start ">
+            <a class="btn btn-ghost text-3xl lg:text-4xl font-extrabold mulish text-[#12132D]">Simple</a>
+          </div>
+          <!--  -->
+          <div class="navbar-end flex gap-10">
+            <!-- circle button start -->
+            <div class="hidden lg:flex gap-5">
+              <button class="btn btn-circle another">
+                <div class="tooltip"> <img  class="h-6 w-6" src="./img/navIcon/home.png" alt="">
+                  <span class="anothertext">Tooltip text</span>
+                </div>
+               
+              </button>
+              <button class="btn btn-circle another">
+                <div class="tooltip">  <img class="h-6 w-6"  src="./img/navIcon/pensil.png" alt="">
+                <span class="anothertext">Tooltip text</span>
+              </div>
+              
+              </button>
+              <button class="btn btn-circle another">
+                <div class="tooltip"><img  class="h-6 w-6" src="./img/navIcon/add.png" alt="">
+                  <span class="anothertext">Tooltip text</span>
+                </div>
+                
+              </button>
+              <button class="btn btn-circle another">
+                <div class="tooltip"><img  class="h-6 w-6"  src="./img/navIcon/flag.png" alt="">
+                  <span class="anothertext">Tooltip text</span>
+                </div>
+                
+              </button>
+            </div>
+            <!-- circle button end -->
+            <div>
+              <button class="btn rounded-2xl bg-[#797DFC] text-white">Sign In</button>
+            </div>
+            
+          </div>
+         
+        </div>
+      </div>
+    </nav>
+    <!-- navbar area end -->
+    <!-- main area start -->
+    <main class="container mx-auto"></main>
+    <!-- main area end -->
+    <!-- footer area start -->
+    <footer></footer>
+    <!-- footer area end -->
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
