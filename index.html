@@ -134,59 +134,18 @@
         <!-- card area -->
         <div class="grid lg:grid-cols-6  gap-10 my-10">
           <!-- left side area single card -->
-          <div class="lg:col-span-4 col-span-6  rounded-3xl bg-[#797dfc1a]">
-            <div class="card lg:card-side  shadow-xl lg:p-10">
-              <!-- indicator -->
-              <div class="indicator ">
-                <span class="indicator-item badge bg-red-400"></span> 
-                <div class="grid  w-32 h-32 bg-base-300 place-items-center ">content</div>
-              </div>
+          <div id="post-container" class="lg:col-span-4 col-span-6  rounded-3xl bg-[#797dfc1a]">
           
-              <div class="card-body flex lg:gap-10 gap-4">
-                <div class="flex gap-10 text-xl font-bold">
-                  <h1>#Music</h1>
-                  <p>Author: Awalad hossin</p>
-                </div>
-                <p class="text-[#12132D] text-[20px] font-extrabold">10 Kids Unaware of Their Halloween Costume</p>
-                <p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
-                <hr>
-                <div class="flex justify-center lg:justify-between flex-col lg:flex-row gap-5">
-                  <div class="flex gap-5 ">
-                  <div class="flex flex-row justify-center items-center gap-2">
-                    <i class="fa-regular fa-comment"></i>
-                    <p>500</p>
-                  </div>
-                  <div class="flex flex-row justify-center items-center gap-2">
-                    <i class="fa-regular fa-eye"></i>
-                    <p>1586</p>
-                  </div>
-                  <div class="flex flex-row justify-center items-center gap-2">
-                    <i class="fa-regular fa-clock"></i>
-                    <p>5 min</p>
-                  </div>
-                </div>
-                  <div class="text-center">
-                    <button class="btn btn-circle  bg-green-400">
-                      <i class="fa-regular fa-envelope-open"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <!-- right side area -->
-          <div class="lg:col-span-2 col-span-6 p-5 bg-[#12132d0d] rounded-2xl">
+          <div  class="lg:col-span-2 col-span-6 p-5 bg-[#12132d0d] rounded-2xl">
             <div class="flex justify-between">
-              <h1>Title</h1>
-              <h1><i class="text-green-700 fa-solid fa-check-double"></i> Marks as reed <span>1</span></h1>
+              <h1 class="text-2xl font-bold">Title</h1>
+              <h1 class="text-2xl font-bold"><i class="text-green-700 fa-solid fa-check-double"></i> Marks as reed <span id="count" class="text-green-400 text-2xl font-bold">0</span></h1>
             </div>
-            <div class="flex justify-between my-10 bg-white p-7 rounded-2xl">
-              <h1>10 Kids Unaware of Their Halloween Costume</h1>
-              <div class="flex flex-row justify-center items-center gap-2">
-                <i class="fa-regular fa-eye"></i>
-                <p>1586</p>
-              </div>
-            </div>
+            <div id="card-right">
+           
+          </div>
           </div>
         </div>
       </section>
