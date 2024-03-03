@@ -199,5 +199,5 @@ const toggolLoadingSpinner=(isLoading)=>{
 }
 
 anotherPost();
-latestPost();
 allPost();
+latestPost();
