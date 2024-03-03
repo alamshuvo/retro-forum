@@ -2,6 +2,7 @@ const postContainer=document.getElementById('post-container');
 const cardRight=document.getElementById('card-right');
 const count=document.getElementById('count');
 const cardArea=document.getElementById('card-area');
+
 let totalCount=0;
 
 const anotherPost= async(search)=>{
@@ -56,12 +57,13 @@ const anotherPost= async(search)=>{
         `
     //    console.log();
       
-        postContainer.appendChild(div);
-        
-       
-       
+        postContainer.appendChild(div);  
      
     });
+    // hide loading spennier
+     setTimeout(() => {
+        toggolLoadingSpinner(false);
+      }, 2000);
     
 }
 const allPost= async()=>{
@@ -182,8 +184,18 @@ const latestPost=async()=>{
 
 const handleSearchBtn=()=>{
     const input=document.getElementById("input").value;
+    toggolLoadingSpinner(true);
     anotherPost(input)
 
+}
+const toggolLoadingSpinner=(isLoading)=>{
+    const spninner=document.getElementById('spninner');
+    if (isLoading) {
+        spninner.classList.remove('hidden')
+    }
+    else{
+        spninner.classList.add('hidden');
+    }
 }
 
 anotherPost();
