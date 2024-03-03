@@ -4,11 +4,14 @@ const count=document.getElementById('count');
 const cardArea=document.getElementById('card-area');
 let totalCount=0;
 
-const allPost= async()=>{
-    const res=await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+const anotherPost= async(search)=>{
+    const res=await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${search}`);
     const data=await res.json();
-    data.posts.forEach(post => {
-        // console.log(post);
+   
+    console.log(data);
+    postContainer.innerHTML='';
+    data.posts.forEach (post=>{
+    //    console.log(post);
         const div=document.createElement('div');
       
         div.innerHTML=`
@@ -51,12 +54,70 @@ const allPost= async()=>{
               </div>
             </div>
         `
-       
+    //    console.log();
       
         postContainer.appendChild(div);
+        
+       
+       
      
     });
-  
+    
+}
+const allPost= async()=>{
+    const res=await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
+    const data=await res.json();
+    data.posts.forEach (post=>{
+        const div=document.createElement('div');
+      
+        div.innerHTML=`
+        <div class="card lg:card-side  shadow-xl lg:p-10">
+              <!-- indicator -->
+              <div class="indicator ">
+                <span id="active" class="indicator-item badge ${post.isActive ? 'bg-green-500':'bg-red-400'}"></span> 
+                <div class="grid  w-32 h-32 bg-base-300 place-items-center "><img src="${post.image} " alt="" srcset=""></div>
+              </div>
+          
+              <div class="card-body flex lg:gap-10 gap-4">
+                <div class="flex gap-10 text-xl font-bold">
+                  <h1>#${post.category}</h1>
+                  <p>Author: ${post.author.name}</p>
+                </div>
+                <p class="text-[#12132D] text-[20px] font-extrabold">${post.title}</p>
+                <p>${post.description}</p>
+                <hr>
+                <div class="flex justify-center lg:justify-between flex-col lg:flex-row gap-5">
+                  <div class="flex gap-5 ">
+                  <div class="flex flex-row justify-center items-center gap-2">
+                    <i class="fa-regular fa-comment"></i>
+                    <p>${post.comment_count}</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-2">
+                    <i class="fa-regular fa-eye"></i>
+                    <p>${post.view_count}</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <p>${post.posted_time} min</p>
+                  </div>
+                </div>
+                  <div class="text-center">
+                    <button onclick="handleBtn(('${post.title}'),(${post.view_count}))" class="btn btn-circle  bg-green-400">
+                      <i class="fa-regular fa-envelope-open"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        `;
+      
+        postContainer.appendChild(div);
+        
+       
+       
+     
+    });
+    
 }
 
 
@@ -85,7 +146,7 @@ const latestPost=async()=>{
     const response=await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data=await response.json();
     data.forEach(latestPost=>{
-        console.log(latestPost);
+        // console.log(latestPost);
         const div=document.createElement("div");
         div.innerHTML= `
         <div class="card w-full my-16 lg:w-96 bg-base-100 shadow-xl">
@@ -105,7 +166,7 @@ const latestPost=async()=>{
             <img class="w-[70px] rounded-full" src="${latestPost.profile_image}" alt="">
             <div>
               <h1 class="font-bold text-[#12132d] text-xl">${latestPost.author.name}</h1>
-              <p>${latestPost.author.designation ?latestPost.author.designation :"No designation yet"}</p>
+              <p>${latestPost.author.designation ?latestPost.author.designation :"No Designation Yet"}</p>
             </div>
           </div>
           
@@ -118,5 +179,13 @@ const latestPost=async()=>{
     
 }
 
-allPost();
+
+const handleSearchBtn=()=>{
+    const input=document.getElementById("input").value;
+    anotherPost(input)
+
+}
+
+anotherPost();
 latestPost();
+allPost();

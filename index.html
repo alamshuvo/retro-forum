@@ -88,11 +88,12 @@
                 </p>
                 <label class="input lg:flex-row flex-col rounded-full py-7 input-bordered flex items-center gap-2">
                   <input
+                    id="input"
                     type="text"
                     class="grow"
                     placeholder="Search here anything"
                   />
-                  <span class=" btn rounded-3xl lg:px-7 text-xl capitalize bg-[#797DFC] text-white">search</span>
+                  <button onclick="handleSearchBtn()" onclick="search()" class=" btn rounded-3xl lg:px-7 text-xl capitalize bg-[#797DFC] text-white">search</button>
                 </label>
               </div>
               <!-- left side end -->
@@ -186,7 +187,7 @@
     </main>
     <!-- main area end -->
     <!-- footer area start -->
-    <footer class="">
+    <footer class="my-16">
       <div style="background: linear-gradient(180.00deg, rgba(18, 19, 45, 0.05),rgba(18, 19, 45, 0) 100%);" class="min-h-[400px]">
         <div class="flex flex-col justify-center items-center min-h-[400px] gap-5">
           <h1 class="font-black text-[30px]">Simple</h1>
